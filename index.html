@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>北京时间</title>
+</head>
+<body>
+
+<p>时间显示 用于老设备</p>
+    <!--setInterval实时显示时间-->
+<body>
+    <span id="time"></span>
+</body>
+<script>
+    function mytime(){
+        var a = new Date();
+        var b = a.toLocaleTimeString();
+        var c = a.toLocaleDateString();
+        document.getElementById("time").innerHTML = c+"&nbsp"+b;
+        }
+    setInterval(function() {mytime()},1000);
+</script>
+
+<iframe name="weather_inc" 
+  src="http://i.tianqi.com/index.php?c=code&id=7" 
+  style="border:solid 1px #7ec8ea" 
+  width="220" height="90" frameborder="0" 
+  marginwidth="0" marginheight="0" scrolling="no">
+</iframe>
+
+<p>你的设备</p>
+<img src="https://api.huxianbk.cn/IP-master/" width="343" height="144">
